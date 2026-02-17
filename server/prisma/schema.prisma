@@ -30,6 +30,9 @@ model Word {
   updatedAt       DateTime @updatedAt
   userId          Int
   user            User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, norwegianWord])
+
 }
 
 model Phrase {

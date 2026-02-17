@@ -121,8 +121,7 @@ const login = async (req, res) => {
 };
 
 const isAuth = async (req, res) => {
-    console.log("req.user:", req.user);           // ← додай це
-    console.log("req.user?.id:", req.user?.id);
+
     try {
         const userQuery = await prisma.user.findUnique({
             where: {

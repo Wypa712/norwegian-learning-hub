@@ -4,6 +4,8 @@ import cors from "cors";
 import dotenv from "dotenv";
 
 import authRoutes from "./routes/auth.js";
+import wordRoutes from "./routes/words.js";
+
 
 dotenv.config();
 
@@ -22,6 +24,9 @@ app.get('/', (req, res) => {
 
 
 app.use('/api/auth', authRoutes)
+
+app.use('/api/word', wordRoutes)
+
 
 console.log("Запускаємо сервер...");
 
